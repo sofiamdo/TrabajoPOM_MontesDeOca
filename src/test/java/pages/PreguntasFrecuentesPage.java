@@ -11,7 +11,7 @@ public class PreguntasFrecuentesPage extends ClaseBase {
     }
     //identificar localizadores
     By locatorPreguntasFrecEncontrado = By.xpath("//div[contains(text(),'Preguntas Frecuentes')]");
-    By locatorPregunta = By.xpath("//span[contains(text(),'¿Cuánto cuesta el envío a domicilio?')]");
+    By locatorPregunta = By.xpath("//span[contains(text(),'o a domicilio?')]");
 
     //acciones del page
 

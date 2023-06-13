@@ -19,7 +19,7 @@ public class HomePage extends ClaseBase {
     By locatorUsuarioLogueado = By.xpath("//span[contains(text(),'maildeprueba29')]");
     By locatorCategoriaOrganizacion = By.xpath("//span[contains(text(),'ORGANIZACION')]");
     By locatorCategoriaEscritorio = By.xpath("//span[contains(text(),'ESCRITORIO')]");
-    By locatorCategoriaArte = By.xpath("//span[contains(text(),'ARTE')]");
+    By locatorCategoriaVinilo = By.xpath("//span[contains(text(),'VINILOS')]");
 
     //acciones del page
     public void irAIngresar(){
@@ -48,7 +48,7 @@ public class HomePage extends ClaseBase {
     public void irACategoriaEscritorio(){
         click(esperaExplicitaPorElementoClickable(locatorCategoriaEscritorio));
     }
-    public void irACategoriaArte(){
-        click(esperaExplicitaPorElementoClickable(locatorCategoriaArte));
+    public void irACategoriaVinilo(){
+        click(esperaExplicitaPorElementoClickable(locatorCategoriaVinilo));
     }
 }

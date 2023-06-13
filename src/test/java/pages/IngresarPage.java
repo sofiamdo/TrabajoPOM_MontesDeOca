@@ -25,14 +25,14 @@ public class IngresarPage extends ClaseBase {
     By locatorBtnConfirmIngreso = By.xpath("//div[contains(text(),'INGRESAR')]");
     By locatorMsjPassIncorrecta = By.xpath("//div[contains(text(),'Clave incorrecta o no existe el usuario.')]");
 
-    By locatorMsjMailImcompleto = By.xpath("//label[contains(text(),'Ingrese una dirección de e-mail válida.')]");
+    By locatorMsjMailImcompleto = By.xpath("//label[contains(text(),'Ingrese una direcci')]");
 
     //acciones del page
 
-    public void llenarRegistroMailDuplicado() {
-        agregarTexto(esperaExplicitaPorPresenciaElemento(locatorTxtMailRegistro), "maildeprueba29@noexite.com");
-        agregarTexto(esperaExplicitaPorPresenciaElemento(locatorTxtPassRegistro), "Prueba12358");
-        agregarTexto(esperaExplicitaPorPresenciaElemento(locatorTxtConfirmPassRegistro), "Prueba12358");
+    public void llenarRegistroMailDuplicado(String TxtMailRegistro, String TxtPassRegistro, String TxtConfirmPassRegistro ) {
+        agregarTexto(esperaExplicitaPorPresenciaElemento(locatorTxtMailRegistro),TxtMailRegistro );
+        agregarTexto(esperaExplicitaPorPresenciaElemento(locatorTxtPassRegistro),TxtPassRegistro );
+        agregarTexto(esperaExplicitaPorPresenciaElemento(locatorTxtConfirmPassRegistro),TxtConfirmPassRegistro );
         click(esperaExplicitaPorElementoClickable(locatorBtnConfirmRegistro));
     }
 
@@ -40,24 +40,24 @@ public class IngresarPage extends ClaseBase {
         return obtenerTexto(esperaExplicitaPorPresenciaElemento(locatorErrorUsserDuplicado));
     }
 
-    public void llenarMiembrosGorsh() {
-        agregarTexto(esperaExplicitaPorPresenciaElemento(locatorTxtMailMiembro), "maildeprueba29@noexite.com");
-        agregarTexto(esperaExplicitaPorPresenciaElemento(locatorTxtPassMiembro), "Prueba123");
+    public void llenarMiembrosGorsh(String TxtMailMiembro, String TxtPassMiembro) {
+        agregarTexto(esperaExplicitaPorPresenciaElemento(locatorTxtMailMiembro), TxtMailMiembro);
+        agregarTexto(esperaExplicitaPorPresenciaElemento(locatorTxtPassMiembro), TxtPassMiembro);
         click(esperaExplicitaPorElementoClickable(locatorBtnConfirmIngreso));
     }
 
-    public void llenarMiembrosGorshPassIncorrecta() {
-        agregarTexto(esperaExplicitaPorPresenciaElemento(locatorTxtMailMiembro), "maildeprueba29@noexite.com");
-        agregarTexto(esperaExplicitaPorPresenciaElemento(locatorTxtPassMiembro), "Prueba");
+    public void llenarMiembrosGorshPassIncorrecta(String TxtMailMiembro, String TxtPassIncorrecta) {
+        agregarTexto(esperaExplicitaPorPresenciaElemento(locatorTxtMailMiembro), TxtMailMiembro);
+        agregarTexto(esperaExplicitaPorPresenciaElemento(locatorTxtPassMiembro), TxtPassIncorrecta);
         esperaExplicitaPorElementoClickable(locatorBtnConfirmIngreso).click();
     }
 
     public String obtenerMensajeErrorPassIncorrecta() {
         return obtenerTexto(esperaExplicitaPorPresenciaElemento(locatorMsjPassIncorrecta));
     }
-    public void llenarMiembrosGorshMailIncompleto() {
-        agregarTexto(esperaExplicitaPorPresenciaElemento(locatorTxtMailMiembro), "maildeprueba29");
-        agregarTexto(esperaExplicitaPorPresenciaElemento(locatorTxtPassMiembro), "Prueba");
+    public void llenarMiembrosGorshMailIncompleto(String TxtMailIncompleto, String TxtPassMiembro) {
+        agregarTexto(esperaExplicitaPorPresenciaElemento(locatorTxtMailMiembro), TxtMailIncompleto);
+        agregarTexto(esperaExplicitaPorPresenciaElemento(locatorTxtPassMiembro), TxtPassMiembro);
         esperaExplicitaPorElementoClickable(locatorBtnConfirmIngreso).click();
 }
     public String obtenerMensajeMailIncompleto(){

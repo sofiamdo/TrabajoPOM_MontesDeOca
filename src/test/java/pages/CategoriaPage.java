@@ -16,9 +16,9 @@ public class CategoriaPage extends ClaseBase {
     By locatorProductoOrganizadorPortacelBlanco = By.xpath("//body/div[6]/div[2]/ul[1]/li[3]/div[1]/a[1]");
     By locatorProductoOrganizadorPortacelBlancoEncontrado = By.xpath("//h1[contains(text(),'Organizador Portacelular Blanco')]");
     By locatorProductoOrganizadorMultiTrans = By.xpath("//h2[contains(text(),'Organizador Multiuso Transparente')]");
-    By locatorProductoCuadroFrasesPapa = By.xpath("//h2[contains(text(),'Cuadro Frases Papá')]");
+    By locatorProductoViniloPuertaDragon = By.xpath("//h2[contains(text(),'Vinilo Puerta Drag')]");
     By locatorProductoOrganizadorMultiTransEncontrado = By.xpath("//h1[contains(text(),'Organizador Multiuso Transparente')]");
-    By locatorProductoCuadroFrasesPapaEncontrado = By.xpath("//h1[contains(text(),'Cuadro Frases Papá')]");
+    By locatorProductoViniloPuertaDragonEncontrado = By.xpath("//h1[contains(text(),'Vinilo Puerta Drag')]");
 
     //acciones del page
     public void irAProductoElefanteRosa(){
@@ -40,10 +40,10 @@ public class CategoriaPage extends ClaseBase {
     public String productoOrganizadorMultiTransEncontrado(){
         return obtenerTexto(esperaExplicitaPorPresenciaElemento(locatorProductoOrganizadorMultiTransEncontrado));
     }
-    public void irAProductoCuadroFrasesPapa(){
-        click(esperaExplicitaPorElementoClickable(locatorProductoCuadroFrasesPapa));
+    public void irAProductoViniloPuertaDragon(){
+        click(esperaExplicitaPorElementoClickable(locatorProductoViniloPuertaDragon));
     }
-    public String productoCuadroFrasesPapaEncontrado(){
-        return obtenerTexto(esperaExplicitaPorPresenciaElemento(locatorProductoCuadroFrasesPapaEncontrado));
+    public String productoViniloPuertaDragonEncontrado(){
+        return obtenerTexto(esperaExplicitaPorPresenciaElemento(locatorProductoViniloPuertaDragonEncontrado));
     }
 }
